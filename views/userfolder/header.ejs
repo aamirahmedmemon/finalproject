@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default navbar-mobile navbar-fixed white no-background bootsnav">
+    <div class="container"> 
+      <link href="https://cdn.datatables.net/v/bs4/dt-2.0.5/datatables.min.css" rel="stylesheet">
+      <!--<div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
+        <a class="navbar-brand" href="index-2.html"> <img src="user/assets/img/logo-light.png" class="logo logo-display" alt=""> <img src="user/assets/img/logo.png" class="logo logo-scrolled" alt=""> </a> 
+      </div>-->
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
+          <!--<li class="dropdown active"> <a href="index-2.html">Home</a> </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Employer</a>
+            <ul class="dropdown-menu animated fadeOutUp">-->
+              <li><a href="home">Home</a></li>
+              
+              <li><a href="/userside/aboutus">About Us</a></li>
+              <li><a href="/userside/contact">Contact </a></li>
+              <li><a href="/userside/employee">Employee </a></li>
+            
+            </ul>
+          </li>
+       
+        <ul class="nav navbar-nav navbar-right">
+          
+        <%  if  (locals.email) { %> 
+          Hi <%=  locals.email %>
+          <li class="sign-up"><a class="btn-signup red-btn" href="/userside/userprofile"><span class="ti-briefcase"></span>My Profile</a></li>
+          
+          <!--<li class="sign-up"><a class="btn-signup red-btn" href="/userside/feedbackview"><span class="ti-briefcase"></span>Feedback view</a></li>
+          <li class="sign-up"><a class="btn-signup red-btn" href="/userside/bookingview"><span class="ti-briefcase"></span>Booking view</a></li>
+          <li class="sign-up"><a class="btn-signup red-btn" href="/userside/paymentview"><span class="ti-briefcase"></span>Payment view</a></li>
+          <li class="sign-up"><a class="btn-signup red-btn" href="/userside/feedback"><span class="ti-briefcase"></span>Feedback</a></li>-->
+      
+         
+        <!--  <li class="sign-up"><a class="btn-signup red-btn" href="/userside/register"><span class="ti-briefcase"></span>Register</a></li>-->
+        <% } else { %> 
+       
+        <li class="br-right"><a class="btn-signup red-btn" href="/userside/login1"></span><i class="login-icon ti-user"></i>Login</a></li>
+          
+        <% } %>
+    
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 

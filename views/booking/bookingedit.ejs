@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | General Form Elements</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../admin/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../admin/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  
+   <%- include('../sider'); -%>
+   
+   <%- include('../header'); -%>
+   
+
+    <!-- Brand Logo -->
+  
+
+    <!-- Sidebar -->
+   
+      <!-- Sidebar user (optional) -->
+     
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Booking Form</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Booking Form</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Booking Form</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form  method="post">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputDate">Booking_date</label>
+                    <input type="date" class="form-control" id="exampleInputDate" name="date" value="<%= user_array.bookingdate %>" placeholder="Enter date" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputdetails">Booking_details </label>
+                    <input type="text" class="form-control" id="exampleInputdetails" value="<%= user_array.bookingdetail %>" name="detail" placeholder="Enter details">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputUser">user_booking</label>
+                    <input type="text" class="form-control" id="exampleInputUser" name="user" value="<%= user_array.userbooking %>" placeholder="Enter user_booking" >
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputStatus">Booking_Status</label>
+                    <select id="exampleInputStatus" name="status" value="<%= user_array.bookingstatus %>">
+                        <option value="pending">pending</option>
+                         <option value="complete">complete</option>
+                        </select>
+                   <!-- <input type="text" class="form-control" id="exampleInputStatus" name="status" placeholder="Enter status" required>-->
+
+                  </div>
+                  
+                 
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+            <!-- general form elements -->
+              
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+ <%- include('../footer'); -%>
+
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="../../admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../admin/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../admin/dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+$(function () {
+  bsCustomFileInput.init();
+});
+</script>
+</body>
+</html>
